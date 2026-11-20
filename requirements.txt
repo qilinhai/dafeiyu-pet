@@ -1,7 +1,11 @@
 # 运行必需（桌宠本体）
-# 只要 Essentials：Core / Gui / Widgets / Multimedia / Network / Svg 都在里面。
-# 装完整的 PySide6 会连带 Addons + WebEngine + Pdf，多下 400MB+，这里用不到。
+# PySide6 拆成多个发行包，必须装两个：
+#   Essentials -> Core / Gui / Widgets / Network / Svg / Qml
+#   Addons     -> QtMultimedia（语音播放靠它，缺了只会弹字不出声）
+# 不要直接装 PySide6：它是元包，会连带拖进 WebEngine（约 150MB）+ Pdf，本项目用不到。
+# 装机顺序、国内镜像等见 README「§7 运行方式」。
 PySide6-Essentials>=6.5
+PySide6-Addons>=6.5
 requests>=2.28
 psutil>=5.9
 nvidia-ml-py>=12.535      # import 名是 pynvml，没有就跳过显卡温度

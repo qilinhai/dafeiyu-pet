@@ -367,6 +367,17 @@ venv\Scripts\python.exe pet.py
 
 第一次运行会在程序目录生成 `config.json`。想改默认值，把 `config.example.json` 复制成 `config.json` 再改。
 
+**依赖只有 5 个包，但 PySide6 那两行都不能少**：
+
+| 包 | 体积 | 少了会怎样 |
+|---|---|---|
+| `PySide6-Essentials` | 78 MB | 起不来 —— 窗口、绘制、网络全在里面 |
+| `PySide6-Addons` | 39 MB | **能起来但一点声都不出** —— 语音播放的 `QtMultimedia` 只在这个包里 |
+| `requests` / `psutil` / `nvidia-ml-py` | 各 < 1 MB | 前者断网功能、中者释放资源 / 进程树、后者显卡温度 |
+
+不要图省事直接 `pip install PySide6`：它是元包，会把 WebEngine（约 150 MB）和 Pdf 一并拖下来，本项目一个都用不上。国内网络慢就加镜像：
+`-i https://pypi.tuna.tsinghua.edu.cn/simple`。
+
 ### 7.3 可选配置
 
 | 想做 | 怎么办 |
