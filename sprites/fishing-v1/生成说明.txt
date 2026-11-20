@@ -1,0 +1,7 @@
+生成方式：内置 image_gen；参考 sprites/正面.png，已核对侧面、背面及 06_统一后_四动作连播.gif。
+交付：8 张 480×480 RGBA PNG 原画、透明循环 WebP、灰底 GIF 预览、动作总览和时序 JSON。
+动画时长：3710 毫秒；等待、眨眼、轻提鱼竿、回到等待。
+后处理：按格拆帧、统一脚底锚点、设置播放时序及格式编码。未替换运行中的桌宠动画。
+限制：这是 8 张关键姿势组成的轻动作循环，不是完整抛竿或钓起鱼的长动画；手绘生成帧的服装细节仍有轻微变化。
+最终生成提示词：
+Use the last shown image as the exact character and art-style reference. Create an animation sprite sheet with exactly 4 columns and 2 rows, 8 equal square cells on a transparent background. This same blue-haired chibi whale maid is fishing, holding a thin tan fishing rod in both hands at waist height, rod angled toward upper right, a fine fishing line and small red-white float on the right. No scenery or text. Preserve the reference face, blue hair, maid headband, navy dress, white apron with blue whale emblem, gold skirt details and whale tail. Fixed camera, identical character scale and foot location in every cell; include entire character and rod with margins. Eight consecutive small-motion frames: relaxed waiting, breathing in, half blink, blink, open eyes, very slightly raise rod, lower rod, return to starting pose. Gentle coherent loop, extremely consistent design, no new objects, no caught fish. Crisp original 2D anime linework and soft cel shading, not pixel art. Wide 2:1 sheet.
