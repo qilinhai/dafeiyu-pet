@@ -1,0 +1,29 @@
+# ---------- 运行时生成（含个人数据/密钥，绝不入库） ----------
+config.json
+pet_memory.json
+pet_memory.json.bak-*
+ai_talk_state.json
+douyin_seen.json
+douyin_takes.json
+phone_link.json
+phone_pair.json
+phone_notify_seen.json
+pending_act.json
+hook_state.json
+endpoint.json
+token.txt
+*.log
+logs/
+shots/
+
+# ---------- 环境 ----------
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# ---------- 构建产物 ----------
+build/
+dist/
+*.zip
