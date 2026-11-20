@@ -347,6 +347,8 @@ dafeiyu-pet/
 
 ### 7.2 三步跑起来
 
+> 只想用、不想装 Python：跳到 [§8.1 直接下载](#81-直接下载不想装-python)。
+
 ```bat
 :: 1. 建虚拟环境并装依赖（只需一次）
 setup.cmd
@@ -392,12 +394,23 @@ python tools/check_menu.py         # 自绘菜单
 
 ## 八、打包
 
+### 8.1 直接下载（不想装 Python）
+
+到 [Releases](https://github.com/qilinhai/dafeiyu-pet/releases/latest) 下 `DaFeiYuPet-v1.0.0-win64.zip`，解压后双击 `DaFeiYuPet/DaFeiYuPet.exe` 即用。
+
+- 体积约 235 MB（压缩后），解压约 339 MB（其中 185 MB 是 114 段动作素材）
+- 已实测：解压无损坏 → 启动 → 本地桥接健康检查 `{"ok": true}` → 进程稳定存活
+
+### 8.2 自己打包
+
 ```bash
 venv\Scripts\python.exe -m pip install -r requirements-dev.txt
 venv\Scripts\python.exe -m PyInstaller --noconfirm dafeiyu-pet.spec
 ```
 
 产物：`dist/DaFeiYuPet/DaFeiYuPet.exe`（onedir，含 114 段动作素材）。
+
+`dafeiyu-pet.spec` 里有两处是踩过坑之后才加的：**不能 `collect_all("PySide6")`**（会把 WebEngine / 3D / Charts 全拖进来，多出 650 MB），**必须显式列 hiddenimports**（本地模块是运行时按需 import 的，静态分析抓不到）。改完之后 879 MB → 339 MB。
 
 **打包后数据落在哪**（onedir 特有，注意别删）：
 
