@@ -1,0 +1,38 @@
+{
+  "min_mb": 40,
+  "respect_auto_restart": true,
+  "protect_core": true,
+  "apps": {
+    "desktoplite": "protect",
+    "weixin": "protect",
+    "doubao": "close",
+    "appstore": "protect",
+    "quark": "clean",
+    "edge": "clean",
+    "baidunetdisk": "clean",
+    "hao wallpaper": "clean",
+    "escrcpy": "clean",
+    "idm": "clean",
+    "egoupdater": "clean",
+    "office6": "clean",
+    "cef": "clean",
+    "openai.codex_26.1111.9664.0_x64__2p2nqsd0c76g0": "clean",
+    "jianyangzhuanyeban": "clean",
+    "mubu": "clean",
+    "splayer": "clean",
+    "todesk": "clean",
+    "openspeedy_1.7.6_green": "clean",
+    "图片去水印": "clean",
+    "clash verge": "protect",
+    "filetemp": "clean",
+    "microsoftcorporationii.winappruntime.singleton_8002.6.5.0_x64__8wekyb3d8bbwe": "clean",
+    "nvcontainer": "protect"
+  },
+  "whitelist": [],
+  "auto_restart": [
+    "nvcontainer",
+    "appstore"
+  ],
+  "_怎么用": "apps 里写「应用id: 状态」，状态四选一：protect=保护 / close=只关窗 / clean=可清理 / ignore=不管。应用 id 就是设置面板那张表里显示的名字（不区分大小写）。",
+  "_阈值": "min_mb：整组内存低于这个数就不折腾。"
+}
