@@ -1,0 +1,23 @@
+{
+  "_note": "大肥鱼说话前想一下：开关、分场景、预算。改完保存就生效，不用重启桌宠和通知监听。",
+  "enabled": true,
+  "model": "deepseek-chat",
+  "scopes": {
+    "notify": true,
+    "day": true,
+    "file": true
+  },
+  "per_hour": 24,
+  "per_day": 200,
+  "daily_yuan": 1.2,
+  "same_kind_gap": 45,
+  "cache_ttl": 3600,
+  "timeout": 5.5,
+  "max_chars": 60,
+  "hunch": {
+    "enabled": true,
+    "per_day": 3,
+    "gap_minutes": 90,
+    "max_chars": 26
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "density": "crazy",
+  "fidget_gap": [
+    3,
+    11
+  ],
+  "act_gap": [
+    15,
+    39
+  ],
+  "enable_fidget": true,
+  "enable_act": true,
+  "enable_fx": true,
+  "enable_festival": true,
+  "festival_chance": 0.55,
+  "lonely_minutes": 25,
+  "cooldown": 36,
+  "time_of_day": true,
+  "group_scale": {
+    "rest": 1.0,
+    "eat": 1.0,
+    "play": 1.0,
+    "grind": 1.0,
+    "money": 1.0,
+    "proud": 1.0,
+    "impatient": 1.0,
+    "whale": 1.0,
+    "magic": 1.0
+  },
+  "banned": [],
+  "only": []
+}
