@@ -1,0 +1,6 @@
+# 仅「重新烘焙动作素材」和开发自检时需要，普通使用不用装
+-r requirements.txt
+Pillow>=10
+numpy>=1.24
+av>=11                    # PyAV：解 webm 的 VP9 + alpha
+pyinstaller>=6.3          # 打包 exe

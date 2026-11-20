@@ -1,0 +1,7 @@
+{
+  "_note": "提示音配置。不出人声时（比如叫悠悠）播这个。改完即时生效，不用重启。",
+  "enabled": true,
+  "template": "chime",
+  "volume": 0.7,
+  "custom_path": ""
+}
