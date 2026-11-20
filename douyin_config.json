@@ -1,0 +1,12 @@
+{
+  "enabled": false,
+  "archive_dir": "",
+  "poll_minutes": 5,
+  "announce_new": true,
+  "max_announces_per_day": 6,
+  "daily_report": true,
+  "daily_report_at": "12:00",
+  "speak": true,
+  "announce_seconds": 9,
+  "report_seconds": 16
+}

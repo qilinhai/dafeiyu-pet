@@ -1,0 +1,29 @@
+{
+  "_comment": "移动动作的步幅标定。一圈地面位移 = stride_ratio × 角色高度 × boost（像素）。改完保存即生效，不用重启。stride_ratio 来自上游 dsh-pet 的 move_strides.json：@360px 高时螃蟹走路一圈 220px（220/360=0.611）、漂浮踏步 90px（90/360=0.25）。active 是「真正在走路」的帧区间（0~1 比例），区间外的静帧不参与位移。speed 是期望移动速度（px/s），实际速度 = min(speed, 素材自然步速 × max_rate)。",
+  "speed": 170.0,
+  "max_rate": 3.0,
+  "min_rate": 0.8,
+  "dirs": {
+    "left": "crab_walk",
+    "right": "crab_walk",
+    "up": "float_step",
+    "down": "float_step"
+  },
+  "clips": {
+    "crab_walk": {
+      "stride_ratio": 0.611,
+      "boost": 2.5,
+      "active": [0.09, 0.88]
+    },
+    "float_step": {
+      "stride_ratio": 0.25,
+      "boost": 4.0,
+      "active": [0.04, 0.99]
+    },
+    "run": {
+      "stride_ratio": 0.667,
+      "boost": 2.5,
+      "active": [0.23, 0.51]
+    }
+  }
+}

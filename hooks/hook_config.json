@@ -1,0 +1,27 @@
+{
+  "enabled": true,
+  "events": {
+    "Stop": true,
+    "Notification": true,
+    "UserPromptSubmit": true,
+    "SessionStart": true,
+    "SessionEnd": false,
+    "SubagentStop": false
+  },
+  "speak": true,
+  "include_summary": true,
+  "max_chars": 40,
+  "min_turn_seconds": 20,
+  "cooldown_sec": 3,
+  "auto_start_pet": true,
+  "auto_start_min_interval": 180,
+  "send_timeout": 4,
+  "memory": true,
+  "log": true,
+  "automation_mode": "ding",
+  "automation_open_dings": 1,
+  "automation_close_dings": 2,
+  "automation_notify_speak": true,
+  "automation_notify_text": "定时任务卡住了，等你点一下",
+  "automation_notify_gap": 90
+}
